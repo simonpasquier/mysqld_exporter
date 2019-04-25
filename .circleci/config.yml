@@ -15,7 +15,7 @@ jobs:
     steps:
     - checkout
     - run: make promu
-    - run: make check_license style staticcheck unused build test-short
+    - run: make check_license style lint unused build test-short
     - run: git diff --exit-code
     - store_artifacts:
         path: mysqld_exporter
